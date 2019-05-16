@@ -55,8 +55,7 @@ def create_app():
             "city": <city_name 城市名称>,
             "company": <company_name 公司名称>,
             "exposure_time": <exposure_time 曝光时间>,
-            "description": <description 描述>,
-            "evidence": <evidence 证据>
+            "description": <description 描述>
         }, ...]
         """
         pass
