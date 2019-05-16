@@ -33,7 +33,7 @@ def create_app():
         :param: b64_url: 
             本题的 b64_url 以 arguments 的形式给出，可能会出现两种输入
             1. 一个 HTTP URL
-            2. 一个指向 TXT 文本文件的相对路径，该 TXT 文本文件包含一个 HTTP URL
+            2. 一个指向 TXT 文本文件的相对路径，该 TXT 文本文件包含一个 base64 字符串
         
         :return: JSON
         {
