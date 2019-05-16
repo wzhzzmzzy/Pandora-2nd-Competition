@@ -12,6 +12,7 @@ def create_app():
         """
         return "Hello, world!"
 
+    # TODO: 捕获 404 错误，返回 404.html
     @app.errorhandler(404)
     def page_not_found():
         """
@@ -19,18 +20,20 @@ def create_app():
         """
         pass
 
+    # TODO: 完成接受 HTTP_URL 的 picture_reshape
+    # TODO: 完成接受相对路径的 picture_reshape
     @app.route('/pic', methods=['POST'])
     def picture_reshape():
         """
         **请使用 PIL 进行本函数的编写**
+        获取请求的 query_string 中携带的 b64_url 值
         从 b64_url 下载一张图片的 base64 编码，reshape 转为 100*100，并开启抗锯齿（ANTIALIAS）
         对 reshape 后的图片分别使用 base64 与 md5 进行编码，以 JSON 格式返回，参数与返回格式如下
         
         :param: b64_url: 
             本题的 b64_url 以 arguments 的形式给出，可能会出现两种输入
-            1. 一个 HTTP URL（Python 类型为 str）
-            2. 一个指向TXT 文本文件的 Python 文件对象（Python 类型为 _io.TextIOWrapper）
-            该 TXT 文本文件包含一个 HTTP URL
+            1. 一个 HTTP URL
+            2. 一个指向 TXT 文本文件的相对路径，该 TXT 文本文件包含一个 HTTP URL
         
         :return: JSON
         {
@@ -41,6 +44,7 @@ def create_app():
         import PIL
         pass
 
+    # TODO: 爬取 996.icu Repo，获取企业名单
     @app.route('/996')
     def company_996():
         """
@@ -56,7 +60,5 @@ def create_app():
         }, ...]
         """
         pass
-
-
 
     return app
