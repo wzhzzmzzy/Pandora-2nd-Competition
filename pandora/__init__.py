@@ -14,7 +14,7 @@ def create_app():
 
     # TODO: 捕获 404 错误，返回 404.html
     @app.errorhandler(404)
-    def page_not_found():
+    def page_not_found(error):
         """
         以此项目中的404.html作为此Web Server工作时的404错误页
         """
