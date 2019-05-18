@@ -33,7 +33,8 @@ def create_app():
         :param: b64_url: 
             本题的 b64_url 以 arguments 的形式给出，可能会出现两种输入
             1. 一个 HTTP URL，指向一张 PNG 图片的 base64 编码结果
-            2. 一个指向 TXT 文本文件的相对路径，该 TXT 文本文件包含一张 PNG 图片的 base64 编码结果
+            2. 一个 TXT 文本文件的文件名，该 TXT 文本文件包含一张 PNG 图片的 base64 编码结果
+                此 TXT 需要通过 SSH 从服务器中获取，并下载到`pandora`文件夹下，具体请参考挑战说明
         
         :return: JSON
         {
