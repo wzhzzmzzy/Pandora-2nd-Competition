@@ -22,7 +22,7 @@ def create_app():
 
     # TODO: 完成接受 HTTP_URL 的 picture_reshape
     # TODO: 完成接受相对路径的 picture_reshape
-    @app.route('/pic', methods=['POST'])
+    @app.route('/pic', methods=['GET'])
     def picture_reshape():
         """
         **请使用 PIL 进行本函数的编写**
